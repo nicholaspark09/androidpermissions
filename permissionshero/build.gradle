@@ -1,5 +1,11 @@
 apply plugin: 'com.android.library'
 
+ext {
+    PUBLISH_GROUP_ID = 'tetras.android'
+    PUBLISH_ARTIFACT_ID = 'permissions-hero'
+    PUBLISH_VERSION = '1.1'
+}
+
 android {
     compileSdkVersion buildVersions.compileSdk
     buildToolsVersion buildVersions.buildTools
@@ -8,8 +14,8 @@ android {
     defaultConfig {
         minSdkVersion buildVersions.minSdk
         targetSdkVersion buildVersions.targetSdk
-        versionCode 1
-        versionName "1.0"
+        versionCode 110
+        versionName "1.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -24,8 +30,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    publishNonDefault true
 }
 
 dependencies {
@@ -35,5 +39,8 @@ dependencies {
     androidTestImplementation(deps.androidTest.espresso, {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
 }
+
+apply from: 'https://raw.githubusercontent.com/' +
+        'blundell/release-android-library/master/' +
+        'android-release-aar.gradle'

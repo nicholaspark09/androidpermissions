@@ -41,6 +41,7 @@ public class PermissionsActivityHelper implements PermissionsHelperContract {
             mCallback.onPermissionGranted();
         } else if (isRationaleNeeded(permission) && !mHasShownRationale) {
             mCallback.onPermissionNeedsRationale(permission);
+            mHasShownRationale = true;
         } else if (isPermissionDeniedForever(permission)) {
             mCallback.onPermissionDeclinedForever(permission);
         } else {
@@ -60,6 +61,7 @@ public class PermissionsActivityHelper implements PermissionsHelperContract {
                 mCallback.onPermissionGranted();
             } else if (isRationaleNeeded(permission) && !mHasShownRationale) {
                 mCallback.onPermissionNeedsRationale(permission);
+                mHasShownRationale = true;
             } else if (isPermissionDeniedForever(permission)) {
                 mCallback.onPermissionDeclinedForever(permission);
             } else {

@@ -1,2 +1,14 @@
 <resources>
+    <string name="main_button_title">Open the Camera</string>
+
+    <!-- Location / Permission -->
+    <string name="location_rationale_title">Location Needs</string>
+    <string name="location_rationale_message">"To better serve you and locate your nearest donut shop, we'd like your help!"</string>
+    <string name="location_settings_title">Location</string>
+    <string name="location_settings_message">"Looks like you have the location services turned off. " +
+            "Please update your settings to use this feature"</string>
+    <string name="location_settings_update">Update Settings</string>
+
+    <!-- Generic Strings -->
+    <string name="cancel">Cancel</string>
 </resources>
